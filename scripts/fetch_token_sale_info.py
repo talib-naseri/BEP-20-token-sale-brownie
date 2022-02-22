@@ -13,14 +13,13 @@ def get_token_sale_info():
     max_contribution = tokenSale.maxContribution()
     sales_status = tokenSale.salesStatus()
 
+    return (owner, rate, hard_cap, max_contribution, sales_status)
+
+
+def main():
+    (owner, rate, hard_cap, max_contribution, sales_status) = get_token_sale_info()
     print('owner: ', owner)
     print('Rate: ', Web3.fromWei(rate, 'ether'))
     print('Hard Cap: ', Web3.fromWei(hard_cap, 'ether'))
     print('Max Contribution: ', Web3.fromWei(max_contribution, 'ether'))
     print('Sales Status: ', SALES_STATUS_ENUM[sales_status])
-
-    return (owner, rate, hard_cap, max_contribution, sales_status)
-
-
-def main():
-    get_token_sale_info()
