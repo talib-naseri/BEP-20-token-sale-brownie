@@ -20,6 +20,7 @@ BLOCK_CONFIRMATIONS_FOR_VERIFICATION = 6
 
 DECIMALS = 18
 INITIAL_VALUE = web3.toWei(2000, "ether")
+SALES_STATUS_ENUM = ['Created', 'Started', 'Ended']
 
 
 def get_account(index=None, id=None):
